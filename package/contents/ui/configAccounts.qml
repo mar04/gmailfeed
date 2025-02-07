@@ -19,7 +19,7 @@
 
 import QtQuick
 import QtQuick.Layouts
-import org.kde.plasma.components as PlasmaComponents
+import QtQuick.Controls
 import org.kde.kcmutils // KCMLauncher
 import org.kde.plasma.private.gmailfeed
 
@@ -45,11 +45,11 @@ SimpleKCM {
 
     RowLayout {
 
-        PlasmaComponents.Label {
+        Label {
             text: i18n("Current account: ")
         }
 
-        PlasmaComponents.ComboBox {
+        ComboBox {
             id: comboBox
 
             model: accountsModel
@@ -61,7 +61,7 @@ SimpleKCM {
             Layout.fillWidth: true
         }
 
-        PlasmaComponents.Button {
+        Button {
 
             icon.name: "applications-internet"
             text: i18n("Manage accounts...")

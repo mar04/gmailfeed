@@ -19,7 +19,7 @@
 
 import QtQuick
 import QtQuick.Layouts
-import org.kde.plasma.components as PlasmaComponents
+import QtQuick.Controls
 import org.kde.kcmutils
 
 SimpleKCM {
@@ -28,11 +28,11 @@ SimpleKCM {
     property alias cfg_pollinterval: spinbox.value
 
     RowLayout {
-        PlasmaComponents.Label {
+        Label {
             text: i18n("Polling interval: ")
         }
 
-        PlasmaComponents.SpinBox {
+        SpinBox {
             id: spinbox
             from: 1
             to: 90
